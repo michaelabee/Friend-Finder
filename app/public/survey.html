@@ -30,13 +30,13 @@
             <form>
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="name" class="form-control" placeholder="Enter Your Name">
+                    <input id="name" type="name" class="form-control" placeholder="Enter Your Name">
                     <small>Required</small>
                 </div>
 
                 <div class="form-group">
                     <label>Link to Photo</label>
-                    <input type="name" class="form-control" placeholder="add a photo link here">
+                    <input id="photo" type="name" class="form-control" placeholder="add a photo link here">
                     <small>Required</small>
                 </div>
             </form>
@@ -50,80 +50,80 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <h1 id="instructions">Please respond to the following 10 statements, 5 meaning "strongly agree" and 1 meaning "strongly disagree".</h1>
-        <h3 class="question" id="q1">I like cats.</h3>
-        <select>
+        <h3 class="question">I like cats.</h3>
+        <select id="q1">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q2">I like dogs.</h3>
-        <select>
+        <h3 class="question">I like dogs.</h3>
+        <select  id="q2">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q3">Being spontaneous is important to me.</h3>
-        <select>
+        <h3 class="question">Being spontaneous is important to me.</h3>
+        <select  id="q3">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q4">I value experiences over material posessions.</h3>
-        <select>
+        <h3 class="question">I value experiences over material posessions.</h3>
+        <select  id="q4">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q5">I am an extrovert.</h3>
-        <select>
+        <h3 class="question">I am an extrovert.</h3>
+        <select  id="q5">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q6">It is easy for me to relate to other people's feelings.</h3>
-        <select>
+        <h3 class="question">It is easy for me to relate to other people's feelings.</h3>
+        <select  id="q6">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q7">I am rarely upset by other people.</h3>
-        <select>
+        <h3 class="question">I am rarely upset by other people.</h3>
+        <select  id="q7">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q8">I think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
-        <select>
+        <h3 class="question">I think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+        <select  id="q8">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q9">Your mind is always buzzing with unexplored ideas and plans.</h3>
-        <select>
+        <h3 class="question">Your mind is always buzzing with unexplored ideas and plans.</h3>
+        <select id="q9">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <h3 class="question" id="q10">You find it easy to stay relaxed and focused even when there is some pressure.</h3>
-        <select>
+        <h3 class="question">You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+        <select  id="q10">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -142,6 +142,19 @@
     <div class="col-md-2"></div>
     </div>
 </body>
+
+<script>
+$("#submit-button").click(
+    function(event) {
+        event.preventDefault();
+        var answers = $("#name").val() + "," + $("#photo").val() + "," + $('#q1').val() + "," + $('#q2').val() + "," + $('#q3').val() + "," + $('#q4').val() + "," +$('#q5').val() + "," +
+        $('#q6').val() + "," + $('#q7').val() + "," + $('#q8').val() + "," + $('#q9').val() + "," +$('#q10').val();
+        console.log(answers);
+    }
+);
+
+
+</script>
 
 
 </html>
