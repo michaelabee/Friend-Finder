@@ -1,6 +1,4 @@
-var path = require('path');
 
-//the variable below should be updating each time a user takes the quiz, correct?
 var friends =
 {
     "name":"Ahmed",
@@ -46,4 +44,11 @@ var friends =
       ],
   };
 
+  function totalDifference (data) {
+    //THIS FUNCTION SHOULD COMPARE THE ABSOLUTE VALUE DIFFERENCES BETWEEN THE ANSWER ARRAY GIVEN BY THE USER AND THE STORED ANSWER ARRAYS
+ };
+ 
+ //AFTER THIS FUNCTION IS RUN, WHEN THE MODAL POP UP 'CLOSE' BUTTON IS PRESSED, THE USER SHOULD BE REROUTED TO THE HOMEPAGE
+ 
 
+module.exports=friends;
