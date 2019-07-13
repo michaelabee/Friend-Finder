@@ -1,3 +1,6 @@
+var path = require('path');
+
+//the variable below should be updating each time a user takes the quiz, correct?
 var friends =
 {
     "name":"Ahmed",
@@ -13,6 +16,34 @@ var friends =
         5,
         4,
         1
-      ]
-  }
-  
+      ],
+
+      "name": "Sparky",
+      "photo": "",
+      "scores": [
+        5,
+        1,
+        5,
+        2,
+        1,
+        5,
+        3,
+        2,
+        5
+      ],
+      "name": "Julie",
+      "photo": "",
+      "scores": [
+        1,
+        5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+  };
+
+

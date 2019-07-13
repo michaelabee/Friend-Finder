@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- <script src="../data/friends.js"></script> --> 
+    <!-- the above link to friends.js doesn't work-->
    
 </head>
 
@@ -144,17 +147,80 @@
 </body>
 
 <script>
+var friends = [
+{
+    "name":"Ahmed",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+},
+{
+      "name": "Sparky",
+      "photo": "",
+      "scores": [
+        5,
+        1,
+        5,
+        2,
+        1,
+        5,
+        3,
+        2,
+        5
+      ],
+},
+    {
+      "name": "Julie",
+      "photo": "",
+      "scores": [
+        1,
+        5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+  }
+];
+
 $("#submit-button").click(
     function(event) {
         event.preventDefault();
-        var answers = $("#name").val() + "," + $("#photo").val() + "," + $('#q1').val() + "," + $('#q2').val() + "," + $('#q3').val() + "," + $('#q4').val() + "," +$('#q5').val() + "," +
-        $('#q6').val() + "," + $('#q7').val() + "," + $('#q8').val() + "," + $('#q9').val() + "," +$('#q10').val();
-        console.log(answers);
+        var data = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            answers: [$('#q1').val() + "," + $('#q2').val() + "," + $('#q3').val() + "," + $('#q4').val() + "," +$('#q5').val() + "," +
+        $('#q6').val() + "," + $('#q7').val() + "," + $('#q8').val() + "," + $('#q9').val() + "," +$('#q10').val()],
+        };
+        console.log(data);
+        friends.push(data);
+        console.log(friends);
+        //why doesn't friends.push() work?
+
+
+        //totalDifference();
     }
 );
 
+function totalDifference (data) {
+   //THIS FUNCTION SHOULD COMPARE THE ABSOLUTE VALUE DIFFERENCES BETWEEN THE ANSWER ARRAY GIVEN BY THE USER AND THE STORED ANSWER ARRAYS
+};
+
+//AFTER THIS FUNCTION IS RUN, WHEN THE MODAL POP UP 'CLOSE' BUTTON IS PRESSED, THE USER SHOULD BE REROUTED TO THE HOMEPAGE
 
 </script>
-
 
 </html>
