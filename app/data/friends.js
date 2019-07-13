@@ -46,9 +46,7 @@ var friends =
 
   function totalDifference (data) {
     //THIS FUNCTION SHOULD COMPARE THE ABSOLUTE VALUE DIFFERENCES BETWEEN THE ANSWER ARRAY GIVEN BY THE USER AND THE STORED ANSWER ARRAYS
+    //IT SHOULD THEN send a modal pop up containing the information about the best match of friend 
  };
- 
- //AFTER THIS FUNCTION IS RUN, WHEN THE MODAL POP UP 'CLOSE' BUTTON IS PRESSED, THE USER SHOULD BE REROUTED TO THE HOMEPAGE
- 
 
 module.exports=friends;
