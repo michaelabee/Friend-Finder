@@ -29,6 +29,7 @@ var friends =
         2,
         5
       ],
+
       "name": "Julie",
       "photo": "",
       "scores": [
@@ -44,9 +45,5 @@ var friends =
       ],
   };
 
-  function totalDifference (data) {
-    //THIS FUNCTION SHOULD COMPARE THE ABSOLUTE VALUE DIFFERENCES BETWEEN THE ANSWER ARRAY GIVEN BY THE USER AND THE STORED ANSWER ARRAYS
-    //IT SHOULD THEN send a modal pop up containing the information about the best match of friend 
- };
 
 module.exports=friends;
